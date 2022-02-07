@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import contents from './Contents.js'
+import { useState } from 'react'
+import MainContent from './MainContent.js'
 
-function App() {
+const App = () => {
+  const [chapter, setChapter] = useState(contents[0])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div id="header" className='noselect'>
+        <h1>Manual</h1>
+      </div>
+      <div id='sidebar'>
+        {contents.map((item, id) => {
+          return (
+            <div
+              key={id}
+              className={
+                (chapter.chapterName === item.chapterName) ? 'dbtn unact noselect' : 'dbtn noselect'
+              }
+              onClick={() => setChapter(contents[id])}
+            >
+              {item.chapterName}
+            </div>
+          )
+        })}
+      </div>
+      <MainContent content={chapter.chapterContents} />
+      <div id="footer" className='noselect'>
+        <h5>Manual</h5>
+        <p>Produced by YanLIANG</p>
+      </div>
     </div>
-  );
+  )
 }
+
 
 export default App;

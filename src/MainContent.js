@@ -16,10 +16,16 @@ const Session = ({ session, show }) => {
 			>
 				{
 					session.sessionContents.map((item, id) => {
-						if (item.type === 'text') {
-							return <p className="session_text" key={id}>{item.content}</p>
+						switch (item.type){
+							case 'text':
+								return <div className="session_text" key={id}>{item.content.map((line, i) => <p key={i}>{line}</p>)}</div>
+							case 'img':
+								return <img className="session_img" key={id} src={'/imgs/' + item.content} alt={item.alt || 'img'}/>
+							case 'code':
+								return <div className="session_code" key={id}>{item.content.map((line, i) => <h5 className="code_line" key={i}>{line}</h5>)}</div>
+							default:
+								return <span></span>
 						}
-						return <img className="session_img" key={id} src={'/imgs/' + item.content} alt={item.alt}/>
 					})
 				}
 			</div>

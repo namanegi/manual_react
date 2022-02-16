@@ -7,7 +7,7 @@ const contents = [
 				'sessionContents': [
 					{
 						'type': 'text',
-						'content': 'test text'
+						'content': ['test text']
 					}
 				]
 			}
@@ -21,7 +21,7 @@ const contents = [
 				'sessionContents': [
 					{
 						'type': 'text',
-						'content': 'test text first'
+						'content': ['test text first']
 					},
 					{
 						'type': 'img',
@@ -30,7 +30,7 @@ const contents = [
 					},
 					{
 						'type': 'text',
-						'content': 'test text under img'
+						'content': ['test text under img']
 					}
 				]
 			},
@@ -39,7 +39,10 @@ const contents = [
 				'sessionContents': [
 					{
 						'type': 'text',
-						'content': 'test text second'
+						'content':[
+							'test text second',
+							'tttttest'
+						]
 					},
 					{
 						'type': 'img',

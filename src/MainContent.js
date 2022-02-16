@@ -38,7 +38,7 @@ const MainContent = ({ content }) => {
 		<div id='main_con'>
 			{content.map((item, id) => {
 				return (
-					<Session key={id} session={item} show={true} />
+					<Session key={id} session={item} show={(id === 0)} />
 				)
 			})}
     </div>

@@ -55,7 +55,7 @@ body {
   height: 30px;
   font-size: 25px;
   text-align: left;
-  background-color: #4169e1;
+  background-color: #000d58;
   color: antiquewhite;
   margin: 0;
   padding: 0;
@@ -68,12 +68,37 @@ body {
 }
 
 .session_unact {
-	background-color: #8d8d8d;
+	background-color: #4169e1;
 }
 
 .unact {
 	background-color: #8d8d8d;
   cursor: auto;
+}
+
+.session_text {
+	font-size: 14px;
+	text-align: left;
+	width: 90%;
+	margin: 10px 5% 30px 5%;
+}
+
+.session_text p {
+	margin: 5px;
+}
+
+.session_code {
+	font-size: 12px;
+	text-align: left;
+	width: 80%;
+	margin: 10px 10% 30px 10%;
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+}
+
+.code_line {
+	margin: 10px 5px;
+	font-weight: 100;
 }
 
 .noselect {

@@ -11,14 +11,14 @@ const App = () => {
         <h1>Manual</h1>
       </div>
       <div id='sidebar'>
-        {contents.map((item, id) => {
+        {contents.map((item, c_id) => {
           return (
             <div
-              key={id}
+              key={c_id}
               className={
                 (chapter.chapterName === item.chapterName) ? 'dbtn unact noselect' : 'dbtn noselect'
               }
-              onClick={() => setChapter(contents[id])}
+              onClick={() => setChapter(contents[c_id])}
             >
               {item.chapterName}
             </div>
